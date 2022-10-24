@@ -33,9 +33,9 @@ int	ft_atoi(const char	*str)
 		num = (num * 10) + (*str - '0');
 		str++;
 	}
-	if (num > 2147483648 && count_minus == -1)
+	if (num > 9223372036854775808 && count_minus == -1)
 		return (0);
-	if (num > 2147483647 && count_minus == 1)
+	if (num > 9223372036854775807 && count_minus == 1)
 		return (-1);
 	return (num * count_minus);
 }
